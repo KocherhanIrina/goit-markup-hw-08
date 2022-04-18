@@ -1,0 +1,47 @@
+.work {
+    padding-top: 47px;
+    padding-bottom: 94px;
+    &__title {
+        @include font (700, 36px, 1.17);
+
+        text-align: center;
+    
+        color: var(--title-text-color);
+    
+        margin-bottom: 50px;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* ___________________WORK-HIDDEN (полупрозрачні підложки під фото)_______________ */
+.list-work {
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    &__hidden-img {
+        position: relative;
+    }
+    &__hidden {
+        position: absolute;
+        @extend %align-list;
+    
+        width: 100%;
+        height: 70px;
+        bottom: 0;
+        left: 0;
+    
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+    &__text {
+        @include font (700, null, 1.14);
+        
+        text-align: center;
+        text-transform: uppercase;
+    
+        color: var(--header-bg-color);
+    }
+}

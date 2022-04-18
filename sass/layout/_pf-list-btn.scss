@@ -1,0 +1,26 @@
+.portfolio-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+    &__secondary-btn {
+        color: var(--title-text-color);
+        background-color: var(--button-bg-color);
+        @include font ($fs:16px, $lh:1.62,
+        $ls: 0.03em);
+
+        border-radius: 4px;
+        border: none;
+        padding: 6px 22px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            color: var(--white-text-color);
+            background-color: var(--accent-color);
+        }
+    }
+}

@@ -1,0 +1,174 @@
+.footer {
+    background-color: var(--futter-bg-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-all {
+    display: flex;
+}
+
+.footer-logo {
+    text-decoration: none;
+    &__web {
+        @include font (700, 26px, 1.2);
+        font-family: Raleway, sans-serif;
+        
+        color: var(--accent-color);
+    }
+    &__studio {
+        color: var(--white-text-color);
+        font-family: Raleway, sans-serif;
+        @include font (700, 26px, 1.2);
+        
+    }
+}
+/* __________Факт-Адресса-FOOTER____________ */
+/* футер адрес */
+
+.footer-contacts {
+    margin-top: 20px;
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    
+    &__address {
+        color: var(--white-text-color);
+        line-height: 1.71;
+        text-decoration: none;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+    
+    &__mailto {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.71;
+        text-decoration: none;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+    
+    &__tel {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.71;
+        text-decoration: none;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    
+    }
+}
+
+/* _________________JOIN___FOOTER_______ */
+
+.join-box {
+    margin-left: 70px;
+    margin-top: 12px;
+}
+
+.join-title {
+    margin-bottom: 20px;
+    @include font (700, $lh:1.14, $ls: 0.03em);
+    
+    text-transform: uppercase;
+    color: var(--header-bg-color);
+}
+
+.join-list {
+    display: flex;
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+    &__icon {
+        fill: var(--header-bg-color);
+    }
+    
+    &__link {
+        @extend %align-list;
+    
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+        }
+    
+    }
+}
+
+/* __________________Email-btn--footer _________ */
+
+.subscribe {
+    margin-left: 93px;
+    &__text {
+        @include font (700, $lh:1.14, $ls: 0.03em);
+        
+        text-transform: uppercase;
+    
+        color: var(--header-bg-color);
+        margin-bottom: 20px;
+    }
+    
+    &__input-email {
+        outline: none;
+        padding-left: 16px;
+        height: 50px;
+        width: 358px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        @include font (400, 16px, 1.25);
+        
+        background-color: transparent;
+        color: #ffffff;
+    }
+    
+    &__btn {
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        @include font (700, 16px, 1.88, 0.06em);
+    
+        color: var(--header-bg-color);
+        background: var(--accent-color);
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 28px;
+        padding-right: 62px;
+        margin-left: 12px;
+    
+    }
+    
+    &__svg-email {
+        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
