@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.feature-list__wrap, .list-work__hidden, .social-list__icon-link, .list-clients__link, .join-list__link, .modal__close-btn {
+.feature-list__wrap, .list-work__hidden, .list-clients__link, .join-list__link, .modal__close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,13 +279,6 @@ img {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 1200px) {
-  .feature {
-    padding-top: 94px;
-    padding-bottom: 47px;
-  }
-}
-
 .feature-list {
   margin: -15px;
 }
@@ -407,39 +400,76 @@ img {
 }
 
 .team {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__title {
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
 }
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__list {
+    flex-wrap: nowrap;
+  }
 }
 
 .team__item {
   text-align: center;
-  height: 428px;
   background-color: var(--header-bg-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 30px - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc(100% - 30px - 30px - 30px - 30px / 4);
+  }
 }
 
 .team__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 15px;
 }
 
 .team__img {
-  display: block;
+  width: 100%;
 }
 
 .team__content {
@@ -469,6 +499,7 @@ img {
 .team__list-social {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .social-list__item-soc:not(:last-child) {
@@ -478,6 +509,9 @@ img {
 .social-list__icon-link {
   width: 44px;
   height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   color: #AFB1B8;
   background-color: var(--header-bg-color);
