@@ -1,0 +1,70 @@
+.subscribe {
+    // margin-left: 93px;
+    
+
+    &__text {
+        @include font (700, $lh:1.14, $ls: 0.03em);
+        text-transform: uppercase;
+        color: var(--header-bg-color);
+        margin-bottom: 20px;
+    }
+    &__form {display: inline-block; 
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__input-email {
+        display: block;
+        outline: none;
+        padding-left: 16px;
+        height: 50px;
+        width: 358px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        @include font (400, 16px, 1.25);
+        background-color: transparent;
+        color: #ffffff;
+        margin-bottom: 20px;
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn {
+        // position: absolute;
+        width: 200px;
+        height: 50px;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        @include font (700, 16px, 1.88, 0.06em);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        color: var(--header-bg-color);
+        background: var(--accent-color);
+
+        padding: 10px 29px;
+
+        // margin-left: 12px;
+
+        @media screen and (min-width: 1200px) {
+            margin: 0 0 0 12px;
+        }
+
+    }
+
+    &__svg-email {
+        margin-left: 10px;
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+    }
+}

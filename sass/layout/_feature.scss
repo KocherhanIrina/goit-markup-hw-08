@@ -1,5 +1,4 @@
 .feature {
-    
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -23,11 +22,9 @@
         @media screen and (min-width: 768px) {
             width: calc((100% - 30px - 30px) / 2);
         }
-
         @media screen and (min-width: 1200px) {
             width: calc(100% - 30px - 30px - 30px - 30px / 4);
         }
-
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -35,7 +32,6 @@
     &__title {
         color: var(--title-text-color);
         @include font (700, 1.14, $ls:0.03em);
-        
         text-transform: uppercase;
         margin-bottom: 10px;
         text-align: center;
@@ -43,7 +39,6 @@
     &__text {
         line-height: 1.71;
     }
-    
     &__wrap {
         @extend %align-list;
         background: #F5F4FA;
@@ -51,9 +46,7 @@
         // width: 270px;
         height: 120px;
         margin-bottom: 20px;
-    
     }
-    
     &__icon {
         width: 70px;
         height: 70px;
