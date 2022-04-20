@@ -2,16 +2,28 @@
     background-color: var(--futter-bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
 }
 
 .footer-all {
-    display: flex;
+    // display: flex;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
 }
-
+.footer-box {
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+}
+}
 .footer-logo {
     text-decoration: none;
     &__web {
-        @include font (700, 26px, 1.2);
+        @include font (700, 24px, 1.17);
         font-family: Raleway, sans-serif;
         
         color: var(--accent-color);
@@ -19,7 +31,7 @@
     &__studio {
         color: var(--white-text-color);
         font-family: Raleway, sans-serif;
-        @include font (700, 26px, 1.2);
+        @include font (700, 24px, 1.17);
         
     }
 }
@@ -77,8 +89,9 @@
 /* _________________JOIN___FOOTER_______ */
 
 .join-box {
-    margin-left: 70px;
-    margin-top: 12px;
+    // margin-left: 70px;
+    // margin-top: 12px;
+    margin-bottom: 60px;
 }
 
 .join-title {
@@ -91,6 +104,7 @@
 
 .join-list {
     display: flex;
+    justify-content: center;
     &__item:not(:last-child) {
         margin-right: 10px;
     }
@@ -120,7 +134,8 @@
 /* __________________Email-btn--footer _________ */
 
 .subscribe {
-    margin-left: 93px;
+    // margin-left: 93px;
+    display: inline-block;
     &__text {
         @include font (700, $lh:1.14, $ls: 0.03em);
         
@@ -131,6 +146,7 @@
     }
     
     &__input-email {
+        display: block;
         outline: none;
         padding-left: 16px;
         height: 50px;
@@ -141,34 +157,42 @@
         
         background-color: transparent;
         color: #ffffff;
+
+        margin-bottom: 20px;
     }
     
     &__btn {
-        position: absolute;
+        // position: absolute;
         width: 200px;
         height: 50px;
-        @include font (700, 16px, 1.88, 0.06em);
-    
-        color: var(--header-bg-color);
-        background: var(--accent-color);
         border: none;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-        padding: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 28px;
-        padding-right: 62px;
-        margin-left: 12px;
+        @include font (700, 16px, 1.88, 0.06em);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    
+        color: var(--header-bg-color);
+        background: var(--accent-color);
+        
+        padding: 10px 29px; 
+
+        // margin-left: 12px;
+
+        @media screen and (min-width: 1200px) {
+            margin: 0 0 0 12px;
+        }
     
     }
     
     &__svg-email {
         margin-left: 10px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
     }
 }
-
-
