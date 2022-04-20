@@ -119,14 +119,27 @@
                 <ul class="work__list list-work list">
                     <li class="list-work__item">
                         <div class="list-work__hidden-img">
-                        <img src="./images/keyboard.jpg" alt="клавиатура и руки" width="370">
-                        <div class="list-work__hidden">
-                            <p class="list-work__text">Десктопные приложения</p>
-                        </div>
+                            <picture>
+                                <source 
+                                srcset="
+                                ./images/keyboard.jpg 1x,
+                                ./images/keyboard-2x.jpg 2x"
+                                />
+                            </picture>
+
+                            <img src="./images/keyboard.jpg" alt="клавиатура и руки" width="370">
+                            <div class="list-work__hidden">
+                                <p class="list-work__text">Десктопные приложения</p>
+                            </div>
                         </div>
                     </li>
                     <li class="list-work__item">
                         <div class="list-work__hidden-img">
+                            <picture>
+                                <source srcset="
+                                    ./images/monitor.jpg 1x,
+                                    ./images/monitor-2x.jpg 2x" />
+                            </picture>
                         <img src="./images/monitor.jpg" alt="монитор и телефон" width="370">
                         <div class="list-work__hidden">
                             <p class="list-work__text">Мобильные приложения</p>
@@ -135,6 +148,11 @@
                     </li>
                     <li class="list-work__item">
                         <div class="list-work__hidden-img">
+                            <picture>
+                                <source srcset="
+                                    ./images/rgb_colors.jpg 1x,
+                                    ./images/rgb_colors-2x.jpg 2x" />
+                            </picture>
                         <img src="./images/rgb_colors.jpg" alt="цветовой круг на планшете" width="370">
                         <div class="list-work__hidden">
                             <p class="list-work__text">Дизайнерские решения</p>
