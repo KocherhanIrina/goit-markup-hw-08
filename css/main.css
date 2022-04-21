@@ -917,7 +917,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .portfolio-list {
-    display: flex;
     justify-content: center;
   }
 }
@@ -926,10 +925,6 @@ img {
   .portfolio-list {
     margin-bottom: 50px;
   }
-}
-
-.portfolio-list__item {
-  margin-top: 15px;
 }
 
 .portfolio-list__item:not(:last-child) {
@@ -955,9 +950,15 @@ img {
 }
 
 .project-list {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .project-list__item {
