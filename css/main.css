@@ -961,6 +961,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .project-list {
+    margin: -15px;
+  }
+}
+
 .project-list__item {
   margin-right: 30px;
   margin-bottom: 30px;
